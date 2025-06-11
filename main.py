@@ -48,10 +48,8 @@ def main():
 
             for shot in shots:
                 if asteroid.is_colliding(shot):
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
-
-
 
         for item in drawable:
             item.draw(screen)
@@ -59,8 +57,6 @@ def main():
         pygame.display.flip()
 
         dt = clock.tick(60) / 1000
-
-
 
 
 if __name__ == "__main__":
